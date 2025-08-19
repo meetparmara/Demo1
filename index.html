@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Beauty Studio - Professional Makeup, Mehndi & Nail Art</title>
+    <meta name="description" content="Professional beauty services including makeup artistry, mehndi art, and nail design. Expert artists creating stunning transformations for special occasions and everyday glamour.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h1>Bella Beauty Studio</h1>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="nav-menu desktop-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Book Now</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="mobile-menu-btn">
+                    <button id="mobileMenuToggle" class="menu-toggle">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="btn btn-primary" onclick="scrollToSection('contact')">Book Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Beauty Redefined</h1>
+            <p>Expert Makeup, Exquisite Mehndi, and Stunning Nail Art</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-large" onclick="scrollToSection('portfolio')">View Portfolio</button>
+                <button class="btn btn-outline btn-large" onclick="scrollToSection('contact')">Book Consultation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Signature Services</h2>
+                <p>Discover our range of professional beauty services, each crafted with precision and artistry</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Makeup Artistry">
+                    </div>
+                    <div class="service-content">
+                        <h3>Makeup Artistry</h3>
+                        <p>From natural everyday looks to glamorous special occasion makeup, our expert artists create stunning transformations.</p>
+                        <div class="service-footer">
+                            <span class="price">Starting from $50</span>
+                            <button class="btn-link">Learn More <i data-lucide="arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1583292650898-7d22cd27ca6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Mehndi Art">
+                    </div>
+                    <div class="service-content">
+                        <h3>Mehndi Art</h3>
+                        <p>Traditional and contemporary henna designs for weddings, celebrations, and special occasions with intricate patterns.</p>
+                        <div class="service-footer">
+                            <span class="price">Starting from $30</span>
+                            <button class="btn-link">Learn More <i data-lucide="arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Nail Art">
+                    </div>
+                    <div class="service-content">
+                        <h3>Nail Art</h3>
+                        <p>Creative nail designs from classic French manicures to elaborate artistic expressions that complement your style.</p>
+                        <div class="service-footer">
+                            <span class="price">Starting from $25</span>
+                            <button class="btn-link">Learn More <i data-lucide="arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Portfolio</h2>
+                <p>Explore our collection of stunning transformations and artistic creations</p>
+            </div>
+
+            <!-- Portfolio Tabs -->
+            <div class="portfolio-tabs">
+                <button class="tab-btn active" data-tab="makeup">Makeup Art</button>
+                <button class="tab-btn" data-tab="mehndi">Mehndi Art</button>
+                <button class="tab-btn" data-tab="nails">Nail Art</button>
+            </div>
+
+            <!-- Portfolio Gallery -->
+            <div class="portfolio-gallery" id="portfolioGallery">
+                <!-- Gallery items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Bella Beauty Studio</h2>
+                    <p>With over 8 years of experience in the beauty industry, Bella Beauty Studio has been transforming lives through the art of makeup, mehndi, and nail design. Our passion for beauty and dedication to excellence has made us the preferred choice for brides, special occasions, and everyday glamour.</p>
+                    <p>Our team of certified artists brings creativity, precision, and personal attention to every client. We believe that beauty is an art form, and every person deserves to feel confident and radiant.</p>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary">Meet Our Team</button>
+                </div>
+
+                <div class="about-images">
+                    <div class="images-column">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Professional beauty salon interior">
+                        <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Beauty products and tools">
+                    </div>
+                    <div class="images-column offset">
+                        <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modern salon workspace">
+                        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Elegant salon reception area">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready for your beauty transformation? Contact us to book your appointment or consultation.</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3>Book Your Appointment</h3>
+                    
+                    <form id="appointmentForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="makeup">Makeup Artistry</option>
+                                <option value="mehndi">Mehndi Art</option>
+                                <option value="nails">Nail Art</option>
+                                <option value="combo">Combination Package</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your event or requirements"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Visit Our Studio</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>123 Beauty Lane, Fashion District<br>New York, NY 10001</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>hello@bellabeautystudio.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 7:00 PM<br>
+                               Saturday: 8:00 AM - 6:00 PM<br>
+                               Sunday: 10:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-media">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i data-lucide="instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i data-lucide="facebook"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i data-lucide="youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Bella Beauty Studio</h3>
+                    <p>Your destination for professional makeup artistry, intricate mehndi designs, and stunning nail art. Where beauty meets artistry.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Makeup Artistry</a></li>
+                        <li><a href="#">Mehndi Art</a></li>
+                        <li><a href="#">Nail Art</a></li>
+                        <li><a href="#">Bridal Packages</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bella Beauty Studio. All rights reserved. | 
+                   <a href="#">Privacy Policy</a> | 
+                   <a href="#">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
